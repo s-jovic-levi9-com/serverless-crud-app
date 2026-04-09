@@ -1,0 +1,43 @@
+{
+  "name": "serverless-crud-app",
+  "version": "1.0.0",
+  "description": "AWS Serverless CRUD application for managing products",
+  "scripts": {
+    "build": "tsc",
+    "build:web": "node build-web.js",
+    "cdk:synth": "cdk synth",
+    "cdk:deploy": "cdk deploy --all",
+    "cdk:destroy": "cdk destroy --all",
+    "deploy": "npm run build:web && npm run cdk:deploy"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "serverless",
+    "lambda",
+    "dynamodb",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.7",
+    "aws-cdk": "^2.125.0",
+    "esbuild": "^0.20.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.504.0",
+    "@aws-sdk/lib-dynamodb": "^3.504.0",
+    "aws-cdk-lib": "^2.125.0",
+    "constructs": "^10.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  }
+}
